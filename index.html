@@ -2,35 +2,39 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>VARELA PONG ROGUELIKE - A Batalha dos 3 Bosses</title>
+  <title>VARELONG - Início</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pagina-menu">
 
-  <div class="jogo-wrapper">
-    <!-- Título do Jogo -->
-    <header class="game-header">
-      <h1 class="game-title">VARELA PONG <span class="badge-rogue">ROGUELIKE</span></h1>
-      <p class="game-subtitle">Pong roguelike · três chefes, uma jornada</p>
+  <div class="menu-page">
+    <header>
+      <h1 class="menu-page-title">VARELONG</h1>
+      <p class="menu-page-subtitle">Go! Go! Zeppeli</p>
     </header>
 
-    <!-- Canvas do Jogo -->
-    <div class="canvas-container">
-      <canvas id="tela" width="860" height="520" aria-label="Varela Pong Roguelike"></canvas>
-      <button id="btn-play" class="menu-play-button" type="button" aria-label="Jogar e ativar a música">
-        <span>JOGAR</span><span class="play-icon" aria-hidden="true">▶</span>
-      </button>
-    </div>
+    <section class="tutorial">
+      <h2>Como jogar</h2>
+      <ul>
+        <li><strong>W / S</strong> ou setas: mover o Varela</li>
+        <li><strong>W/S 2x</strong>: dash relâmpago</li>
+        <li><strong>ESPAÇO</strong>: super soco (se tiver o poder) ou shield</li>
+        <li><strong>E</strong>: ativar shield</li>
+        <li><strong>P</strong>: pausar · <strong>M</strong>: ativar/desativar som</li>
+      </ul>
+      <p class="tutorial-objetivo">
+        Reúna os poderes, vença o Free Fire e o Freddy Fazbear e faça o Varela sair vitorioso!
+      </p>
+    </section>
 
-    <!-- Barra de Ajuda / Teclas -->
-    <footer class="game-footer">
-      <div class="dica"><strong>Movimento:</strong> W / S, setas ou mouse · <strong>P:</strong> pausar · <strong>M:</strong> som</div>
-    </footer>
+    <nav class="menu-page-actions">
+      <a class="menu-page-btn" href="jogo.html">JOGAR</a>
+      <a class="menu-page-btn" href="criadores.html">CRIADORES</a>
+    </nav>
   </div>
 
-  <script src="game.js"></script>
 </body>
 </html>

@@ -260,13 +260,6 @@ function atualizarHUD(forcar = false) {
 // 6. CONTROLES E FLUXO DE PARTIDA
 // ========================================================
 
-canvas.addEventListener("mousemove", (e) => {
-  if (pausado) return;
-  const rect = canvas.getBoundingClientRect();
-  const mouseY = e.clientY - rect.top;
-  jogador.y = Math.max(0, Math.min(canvas.height - jogador.altura, mouseY - jogador.altura / 2));
-});
-
 window.addEventListener("keydown", (e) => {
   liberarAudio();
   if (e.key === "w" || e.key === "W" || e.key === "ArrowUp") jogador.subindo = true;
@@ -317,7 +310,6 @@ function reiniciarJogo() {
   atualizarHUD(true);
   tocarSomGol("empate");
 }
-
 
 // ========================================================
 // 7. ATUALIZAÇÃO DA FÍSICA (INDEPENDENTE DE FPS)

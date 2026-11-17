@@ -39,6 +39,7 @@ body {
   color: #fff;
   text-shadow: 0 0 15px rgba(0, 230, 255, 0.6), 0 0 30px rgba(255, 0, 128, 0.4);
   background: linear-gradient(180deg, #ffffff 0%, #00e5ff 60%, #ff007f 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -143,7 +144,7 @@ body.menu-ativo canvas {
 
 canvas {
   display: block;
-  cursor: crosshair;
+  cursor: default;
 }
 
 /* RODAPÉ COM DICAS */
@@ -159,4 +160,147 @@ canvas {
 
 .dica strong {
   color: #00e5ff;
+}
+
+/* BOTÃO RECOMEÇAR (vitória / game over) */
+.restart-button {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  background: linear-gradient(110deg, #00d9eb, #00a9c8 55%, #ff3d8b);
+  color: #07111b;
+  font: 900 18px 'Rubik', Arial, sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.38), 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
+}
+
+body.fim-ativo .restart-button {
+  display: flex;
+}
+
+.restart-button:hover,
+.restart-button:focus-visible {
+  transform: translateX(-50%) scale(1.06);
+  filter: brightness(1.15);
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* PÁGINAS DE MENU (INÍCIO / CRIADORES) */
+body.pagina-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-page {
+  text-align: center;
+  width: min(680px, 90vw);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.menu-page-title {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  background: linear-gradient(180deg, #ffffff 0%, #00e5ff 60%, #ff007f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.35));
+}
+
+.menu-page-subtitle {
+  color: #ffcc00;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+.tutorial,
+.criadores {
+  background: rgba(18, 25, 38, 0.85);
+  border: 1px solid #23354d;
+  border-radius: 16px;
+  padding: 26px 30px;
+  text-align: left;
+}
+
+.tutorial h2 {
+  font-size: 20px;
+  color: #00e5ff;
+  margin-bottom: 14px;
+}
+
+.tutorial ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.tutorial ul strong {
+  color: #00e5ff;
+}
+
+.tutorial-objetivo {
+  margin-top: 16px;
+  color: #9cb5cf;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.criadores {
+  text-align: center;
+}
+
+.criadores-intro {
+  font-size: 16px;
+  color: #cfdcea;
+  line-height: 1.6;
+}
+
+.menu-page-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-page-btn {
+  display: inline-block;
+  min-width: 200px;
+  padding: 16px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: linear-gradient(110deg, #00d9eb, #00a9c8 55%, #ff3d8b);
+  color: #07111b;
+  font: 900 18px 'Rubik', Arial, sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.38), 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
+}
+
+.menu-page-btn:hover,
+.menu-page-btn:focus-visible {
+  transform: scale(1.06);
+  filter: brightness(1.15);
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
 }

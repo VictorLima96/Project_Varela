@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>VARELONG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="jogo-wrapper">
+    <!-- Título do Jogo -->
+    <header class="game-header">
+      <h1 class="game-title">VARELONG<span class="badge-rogue"></span></h1>
+      <p class="game-subtitle">Go! Go! Zeppeli</p>
+    </header>
+
+    <!-- Canvas do Jogo -->
+    <div class="canvas-container">
+      <canvas id="tela" width="860" height="520" aria-label="Varela Pong Roguelike"></canvas>
+      <button id="btn-play" class="menu-play-button" type="button" aria-label="Jogar e ativar a música">
+        <span>JOGAR</span><span class="play-icon" aria-hidden="true">▶</span>
+      </button>
+      <button id="btn-restart" class="restart-button" type="button" aria-label="Recomeçar o jogo">
+        <span>RECOMEÇAR</span>
+      </button>
+    </div>
+
+    <!-- Barra de Ajuda / Teclas -->
+    <footer class="game-footer">
+      <div class="dica"><strong>Movimento:</strong> W / S ou setas · <strong>P:</strong> pausar · <strong>M:</strong> som</div>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
