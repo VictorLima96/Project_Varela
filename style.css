@@ -200,16 +200,22 @@ body.fim-ativo .restart-button {
 /* PÁGINAS DE MENU (INÍCIO / CRIADORES) */
 body.pagina-menu {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at 50% 18%, #1b2537 0%, #0c1220 48%, #070a12 100%);
 }
 
 .menu-page {
+  margin: auto;
   text-align: center;
   width: min(680px, 90vw);
   display: flex;
   flex-direction: column;
   gap: 28px;
+  padding: 40px 0;
 }
 
 .menu-page-title {
@@ -230,8 +236,7 @@ body.pagina-menu {
   margin-top: 6px;
 }
 
-.tutorial,
-.criadores {
+.tutorial {
   background: rgba(18, 25, 38, 0.85);
   border: 1px solid #23354d;
   border-radius: 16px;
@@ -265,13 +270,90 @@ body.pagina-menu {
 }
 
 .criadores {
+  width: 100%;
+}
+
+.criadores-header {
   text-align: center;
 }
 
-.criadores-intro {
-  font-size: 16px;
-  color: #cfdcea;
-  line-height: 1.6;
+.sep {
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 4px;
+}
+
+.criadores-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+}
+
+.criador-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 22px;
+  background: linear-gradient(180deg, #1a2334 0%, #0f1626 100%);
+  border: 1px solid #2a3b52;
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px #0a0e16, 0 10px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.criador-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 229, 255, 0.7);
+  box-shadow: 0 0 22px rgba(0, 229, 255, 0.28), 0 14px 30px rgba(0, 0, 0, 0.6);
+}
+
+.criador-naipe {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  line-height: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  text-shadow: 0 0 12px currentColor;
+}
+
+.naipe-vermelho { color: #ff3b30; }
+.naipe-azul { color: #00e5ff; }
+.naipe-dourado { color: #ffcc00; }
+
+.criador-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+
+.criador-nome {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.criador-nome:hover,
+.criador-nome:focus-visible {
+  color: #00e5ff;
+}
+
+.criador-cargo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7d91ab;
 }
 
 .menu-page-actions {
@@ -286,21 +368,35 @@ body.pagina-menu {
   min-width: 200px;
   padding: 16px 30px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.85);
   background: linear-gradient(110deg, #00d9eb, #00a9c8 55%, #ff3d8b);
   color: #07111b;
   font: 900 18px 'Rubik', Arial, sans-serif;
   letter-spacing: 2px;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 0 24px rgba(0, 229, 255, 0.38), 0 8px 24px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4), 0 0 24px rgba(0, 229, 255, 0.38), 0 8px 24px rgba(0, 0, 0, 0.45);
   transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
 }
 
 .menu-page-btn:hover,
 .menu-page-btn:focus-visible {
-  transform: scale(1.06);
+  transform: translateY(-2px) scale(1.03);
   filter: brightness(1.15);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 229, 255, 0.55), 0 10px 28px rgba(0, 0, 0, 0.55);
   outline: 2px solid #ffffff;
   outline-offset: 3px;
+}
+
+.menu-page-btn-alt {
+  background: linear-gradient(110deg, #1a2334, #121b2b);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.menu-page-btn-alt:hover,
+.menu-page-btn-alt:focus-visible {
+  filter: brightness(1.25);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.45), 0 0 26px rgba(255, 255, 255, 0.15), 0 10px 28px rgba(0, 0, 0, 0.55);
 }
