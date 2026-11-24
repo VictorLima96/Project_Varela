@@ -10,11 +10,59 @@
 </head>
 <body class="pagina-menu">
 
+  <nav class="site-nav">
+    <a class="site-nav-brand" href="index.html">VARELONG</a>
+    <div class="site-nav-links">
+      <a href="index.html" class="active">Início</a>
+      <a href="jogo.html">Jogo</a>
+      <a href="criadores.html">Criadores</a>
+    </div>
+  </nav>
+
   <div class="menu-page">
     <header>
       <h1 class="menu-page-title">VARELONG</h1>
       <p class="menu-page-subtitle">Go! Go! Zeppeli</p>
     </header>
+
+    <section class="menu-section">
+      <h2 class="menu-section-title">Sobre o jogo</h2>
+      <p class="sobre-texto">
+        VARELONG é um pong roguelike em que você controla o Varela para rebater a bola
+        e enfrentar dois bosses: o <strong>Free Fire</strong> e o <strong>Freddy Fazbear</strong>.
+        A cada boss derrotado, você escolhe um power-up permanente, e o objetivo é vencer
+        os dois sem perder todas as suas vidas.
+      </p>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="menu-section-title">Bosses</h2>
+      <div class="bosses-grid">
+        <div class="boss-card">
+          <img src="assets/boss_freefire.png" alt="Free Fire">
+          <span class="boss-nome">Free Fire</span>
+          <span class="boss-tag">Boss 1 · Atira e cria barreira de gelo</span>
+        </div>
+        <div class="boss-card">
+          <img src="assets/boss_fred.png" alt="Freddy Fazbear">
+          <span class="boss-nome">Freddy Fazbear</span>
+          <span class="boss-tag">Boss 2 · Invoca mini Freddies</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="menu-section-title">Power-ups</h2>
+      <ul class="powerups-lista">
+        <li><strong>Varela Turbo</strong> Sua velocidade aumenta em +40%.</li>
+        <li><strong>Super Soco</strong> Rebatida flamejante com ESPAÇO.</li>
+        <li><strong>Inimigo Nanico</strong> O boss encolhe 35%.</li>
+        <li><strong>Dash Relâmpago</strong> Dash veloz com W/S 2x.</li>
+        <li><strong>Barreira de Escudo</strong> Protege o seu gol com E.</li>
+        <li><strong>Exército de Gatos</strong> Gatos rebatem a bola para o boss.</li>
+        <li><strong>Thug Life Crítico</strong> Smash crítico na ponta da raquete.</li>
+      </ul>
+    </section>
 
     <section class="tutorial">
       <h2>Como jogar</h2>
@@ -26,13 +74,13 @@
         <li><strong>P</strong>: pausar · <strong>M</strong>: ativar/desativar som</li>
       </ul>
       <p class="tutorial-objetivo">
-        Reúna os poderes, vença o Free Fire e o Freddy Fazbear e faça o Varela sair vitorioso!
+        Objetivo: reúna os poderes, vença o Free Fire e o Freddy Fazbear e faça o Varela sair vitorioso!
       </p>
     </section>
 
     <nav class="menu-page-actions">
       <a class="menu-page-btn" href="jogo.html">JOGAR</a>
-      <a class="menu-page-btn" href="criadores.html">CRIADORES</a>
+      <a class="menu-page-btn menu-page-btn-alt" href="criadores.html">CRIADORES</a>
     </nav>
   </div>
 

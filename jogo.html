@@ -2,13 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>VARELONG</title>
+  <title>VARELONG - Jogo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pagina-jogo">
+
+  <nav class="site-nav">
+    <a class="site-nav-brand" href="index.html">VARELONG</a>
+    <div class="site-nav-links">
+      <a href="index.html">Início</a>
+      <a href="jogo.html" class="active">Jogo</a>
+      <a href="criadores.html">Criadores</a>
+    </div>
+  </nav>
 
   <div class="jogo-wrapper">
     <!-- Título do Jogo -->
@@ -33,6 +42,32 @@
       <div class="dica"><strong>Movimento:</strong> W / S ou setas · <strong>P:</strong> pausar · <strong>M:</strong> som</div>
     </footer>
   </div>
+
+  <!-- Como jogar -->
+  <section class="instrucoes">
+    <h2>Como jogar</h2>
+    <div class="instrucoes-grid">
+      <div class="instrucao-bloco">
+        <h3>Objetivo</h3>
+        <p>
+          Rebata a bola para marcar gols no adversário e derrote os dois bosses:
+          o <strong>Free Fire</strong> e o <strong>Freddy Fazbear</strong>. A cada boss
+          derrotado, escolha um power-up permanente. Você tem 3 vidas e perde uma
+          sempre que o boss marca um gol.
+        </p>
+      </div>
+      <div class="instrucao-bloco">
+        <h3>Comandos</h3>
+        <ul>
+          <li><strong>W / S</strong> ou <strong>setas ↑↓</strong> — mover o Varela</li>
+          <li><strong>W/S 2x</strong> — dash relâmpago (com o poder)</li>
+          <li><strong>ESPAÇO</strong> — super soco ou shield</li>
+          <li><strong>E</strong> — ativar shield</li>
+          <li><strong>P</strong> — pausar · <strong>M</strong> — ligar/desligar som</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <script src="audio.js"></script>
   <script src="visual.js"></script>
