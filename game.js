@@ -168,6 +168,12 @@ canvas.addEventListener("mousemove", (e) => {
 
 window.addEventListener("keydown", (e) => {
   sincronizarMusica();
+
+  // Impede a página de rolar ao usar as teclas do jogo (setas e espaço)
+  if (e.code === "Space" || e.key === "ArrowUp" || e.key === "ArrowDown") {
+    e.preventDefault();
+  }
+
   if (e.repeat) return;
   teclas[e.key] = true;
 
